@@ -1,0 +1,87 @@
+/* Button styling */
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(186, 190, 191, 255);
+  width: 7vw;
+  height: 12vh;
+  border-radius: 100px;
+}
+
+/* Initial soccer ball styling */
+.soccer-ball {
+  width: 8vw;
+  height: 12.8vh;
+  background-color: rgba(186, 190, 191, 255);
+}
+
+/* Styling for soccer ball after kick */
+.soccer-ball-after-kick {
+  width: 7.2vw;
+  height: 12.8vh;
+  background-color: rgba(186, 190, 191, 255);
+}
+
+/* Media queries for larger screens */
+@media screen and (max-width: 2560px) {
+  .soccer-ball,
+  .soccer-ball-after-kick {
+    width: 30vw;
+    height: 12.8vh;
+    background-color: rgba(186, 190, 191, 255);
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .soccer-ball,
+  .soccer-ball-after-kick {
+    width: 30vw;
+    height: 12.8vh;
+    background-color: rgba(186, 190, 191, 255);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .soccer-ball,
+  .soccer-ball-after-kick {
+    width: 30vw;
+    height: 12.8vh;
+    background-color: rgba(186, 190, 191, 255);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .soccer-ball,
+  .soccer-ball-after-kick {
+    width: 30vw;
+    height: 12.8vh;
+    background-color: rgba(186, 190, 191, 255);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .soccer-ball,
+  .soccer-ball-after-kick {
+    width: 30vw;
+    height: 12.8vh;
+    background-color: rgba(186, 190, 191, 255);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .soccer-ball,
+  .soccer-ball-after-kick {
+    width: 30vw;
+    height: 12.8vh;
+    background-color: rgba(186, 190, 191, 255);
+  }
+}
+@media screen and (max-width: 320px) {
+  .soccer-ball,
+  .soccer-ball-after-kick {
+    width: 30vw;
+    height: 12.8vh;
+    background-color: rgba(186, 190, 191, 255);
+  }
+}

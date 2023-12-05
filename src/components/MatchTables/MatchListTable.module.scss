@@ -1,0 +1,112 @@
+/* Styles for the text header */
+.text-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vw;
+  font-weight: 600;
+  color: #6b6b6b;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 5vh;
+  color: #656464; /* Note: This color property appears twice, consider removing one */
+}
+
+/* Styles for the table */
+table {
+  width: 65vw;
+  height: 40vh;
+  border: 1px solid #a0a0a1;
+  border-collapse: collapse;
+  margin-bottom: 5vh;
+  border-radius: 10px;
+}
+
+/* Styles for table titles */
+.table-titles {
+  display: flex;
+  justify-content: center;
+  color: #d6d8d7;
+  font-size: 1vw;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* Styles for table rows */
+tr {
+  border: 1px solid #a0a0a1;
+  text-align: center;
+  background-color: #d6d8d7;
+}
+
+/* Styles for table cells */
+td {
+  border: 1px solid #a0a0a1;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1vw;
+  color: #6b6b6b;
+  width: 5vw;
+  height: 6vh;
+}
+
+/* Styles for specific cells */
+td:nth-child(1) {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+
+td:nth-child(2) {
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.65vw;
+}
+
+td:nth-child(10) {
+  font-weight: bold;
+}
+
+/* Styles for table headers */
+th {
+  text-align: center;
+  width: 5vw;
+  height: 6vh;
+  background-color: #881437;
+  border: 1px solid #a0a0a1;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+  table {
+    width: 100vw;
+    height: 40vh;
+  }
+  .table-titles {
+    font-size: 2vw;
+  }
+  td {
+    font-size: 2vw;
+  }
+  td:nth-child(2) {
+    font-size: 1.5vw;
+  }
+}
+
+/* Further responsive styles for even smaller screens */
+@media screen and (max-width: 425px) {
+  .text-header {
+    font-size: 7vw;
+  }
+  table {
+    width: 100vw;
+    height: 40vh;
+  }
+  .table-titles {
+    font-size: 2.5vw;
+  }
+  td {
+    font-size: 3vw;
+  }
+  td:nth-child(2) {
+    font-size: 2vw;
+  }
+}

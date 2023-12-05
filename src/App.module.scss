@@ -1,0 +1,104 @@
+body {
+  background-color: rgba(104, 7, 25, 255);
+  margin: 0;
+  padding: 0;
+}
+
+/* Main container for the entire layout */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 75vh;
+  background-color: rgba(186, 190, 191, 255);
+}
+
+/* Container for the button */
+.ball-container {
+  display: flex;
+  width: 100vw;
+  height: 15vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #6b6b6b;
+  margin-top: 1vh;
+}
+
+/* Container for the entire table section */
+.table-container {
+  display: flex;
+  width: 100vw;
+  height: 75vh;
+  align-items: flex-start;
+}
+
+/* Container for the list/table on the left */
+.list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  height: 65vh;
+  margin-left: 5vw;
+}
+
+/* Container for the round/table on the right */
+.round-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  height: 65vh;
+}
+
+/* Media query for screens with a max-width of 768px */
+@media screen and (max-width: 768px) {
+  /* Adjusting layout for smaller screens */
+  .table-container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 75vh;
+    align-items: flex-start;
+  }
+
+  /* Adjusting width and height of the list/table on the left */
+  .list-container {
+    width: 90vw;
+    height: 60vh;
+  }
+
+  /* Hiding the round/table on the right */
+  .round-container {
+    display: none;
+  }
+}
+
+/* Media query for screens with a max-width of 425px */
+@media screen and (max-width: 425px) {
+  /* Adjusting layout for even smaller screens */
+  .table-container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 75vh;
+    align-items: flex-start;
+  }
+
+  /* Adjusting margin and dimensions of the list/table on the left */
+  .list-container {
+    margin-left: 0vw;
+    width: 100vw;
+    height: 61.7vh;
+  }
+
+  /* Hiding the round/table on the right */
+  .round-container {
+    display: none;
+  }
+}
