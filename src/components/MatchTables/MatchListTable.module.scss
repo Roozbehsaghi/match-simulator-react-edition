@@ -85,7 +85,7 @@ th {
   font-family: "Courier New", Courier, monospace;
 }
 
-@media screen and (max-width: $desktop-width) {
+@media screen and (max-width: $laptop-width) {
   @keyframes slideDown {
     from {
       transform: translateX(-150px);

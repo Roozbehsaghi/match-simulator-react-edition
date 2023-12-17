@@ -99,14 +99,20 @@
   height: 1vw;
 }
 
-@media screen and (min-width: $laptopL-width) {
+@media screen and (max-width: $laptopL-width) {
   .empty-round {
     height: 45vh;
   }
+  .teams-name {
+    font-size: 0.7vw;
+  }
 }
 
-@media screen and (max-width: $desktop-width) {
+@media screen and (max-width: $laptop-width) {
   .empty-round {
     height: 45vh;
+  }
+  .teams-name {
+    font-size: 0.7vw;
   }
 }
