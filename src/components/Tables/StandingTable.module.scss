@@ -63,12 +63,28 @@ td {
 td:nth-child(1) {
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
+  color: var(--mediumdarkgray);
+  background-color: var(--ashgray);
+  border: solid 1px var(--dimgray);
+  animation: fadeIn 3s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    background-color: var(--lightgray);
+    color: var(--dimgray);
+  }
+  to {
+    background-color: var(--ashgray);
+    color: var(--mediumdarkgray);
+  }
 }
 
 td:nth-child(2) {
   text-align: center;
   font-weight: bold;
   font-size: 0.65vw;
+  background-color: var(--yellow50);
+  border: solid 1px var(--dimgray);
 }
 
 td:nth-child(10) {
