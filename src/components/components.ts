@@ -7,14 +7,14 @@ export { default as MatchRoundTable } from "./MatchTables/MatchRoundTable";
 export { default as LogoComponent } from "./LogoComponent/LogoComponent";
 
 // Export titles and color-related utilities
-export * from "./MyComponent/titles";
+export * from "./ToolkitComponent/titles";
 export * from "./StyleComponent/colors";
 
 // Export all types from types.ts
-export * from "./MyComponent/types";
+export * from "./ToolkitComponent/types";
 
 // Export all function from functions.ts
-export * from "./MyComponent/functions";
+export * from "./ToolkitComponent/functions";
 
 // Export all breakpoints from breakpoints.ts
-export * from "./MyComponent/breakpoints";
+export * from "./ToolkitComponent/breakpoints";
