@@ -1,13 +1,13 @@
 import { MatchRounds } from "../components";
-import styles from "./MatchRoundTable.module.scss";
+import styles from "./RoundTable.module.scss";
 import { motion } from "framer-motion";
 
-type MatchRoundTableProps = {
+type RoundTableProps = {
   matchRounds: MatchRounds;
   tableTitles: string[];
 };
 
-const MatchRoundTable: React.FC<MatchRoundTableProps> = ({
+const RoundTable: React.FC<RoundTableProps> = ({
   matchRounds,
   tableTitles,
 }) => {
@@ -47,4 +47,4 @@ const MatchRoundTable: React.FC<MatchRoundTableProps> = ({
   );
 };
 
-export default MatchRoundTable;
+export default RoundTable;

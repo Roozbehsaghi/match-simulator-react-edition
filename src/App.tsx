@@ -6,8 +6,8 @@ import {
   Header,
   Button,
   LogoComponent,
-  MatchListTable,
-  MatchRoundTable,
+  StandingTable,
+  RoundTable,
   MatchRounds,
   matchProcces,
   tableTitles,
@@ -53,9 +53,9 @@ function App() {
         {/* Container for the table section */}
         <div className={styles["tables-container"]}>
           {/* Container for the list/table on the left */}
-          <div className={styles["list-table-container"]}>
-            {/* MatchListTable component */}
-            <MatchListTable
+          <div className={styles["standing-table-container"]}>
+            {/* StandingTable component */}
+            <StandingTable
               tableTitles={tableTitles}
               allMatchRounds={allMatchRounds}
               sortedTeamsByPointsAndStrength={sortedTeamsByPointsAndStrength}
@@ -64,8 +64,8 @@ function App() {
 
           {/* Container for the round/table on the right */}
           <div className={styles["round-table-container"]}>
-            {/* MatchRoundTable component */}
-            <MatchRoundTable
+            {/* RoundTable component */}
+            <RoundTable
               matchRounds={allMatchRounds[allMatchRounds.length - 1]}
               tableTitles={tableTitles}
             />

@@ -2,8 +2,8 @@
 export { default as Button } from "./Button/Button";
 export { default as Header } from "./Header/Header";
 export { default as matchProcces } from "./MatchProcces/MatchProcces";
-export { default as MatchListTable } from "./MatchTables/MatchListTable";
-export { default as MatchRoundTable } from "./MatchTables/MatchRoundTable";
+export { default as StandingTable } from "./Tables/StandingTable";
+export { default as RoundTable } from "./Tables/RoundTable";
 export { default as LogoComponent } from "./LogoComponent/LogoComponent";
 
 // Export titles and color-related utilities

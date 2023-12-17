@@ -1,16 +1,16 @@
 import { MatchRounds, Team } from "../components";
-import styles from "./MatchListTable.module.scss";
+import styles from "./StandingTable.module.scss";
 import { motion } from "framer-motion";
 
-// Define the props for the MatchListTable component
-type MatchListTableProps = {
+// Define the props for the StandingTable component
+type StandingTableProps = {
   tableTitles: string[];
   allMatchRounds: MatchRounds[];
   sortedTeamsByPointsAndStrength: Team[];
 };
 
-// MatchListTable component
-const MatchListTable: React.FC<MatchListTableProps> = ({
+// StandingTable component
+const StandingTable: React.FC<StandingTableProps> = ({
   tableTitles,
   sortedTeamsByPointsAndStrength,
 }) => {
@@ -55,4 +55,4 @@ const MatchListTable: React.FC<MatchListTableProps> = ({
   );
 };
 
-export default MatchListTable;
+export default StandingTable;
