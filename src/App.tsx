@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./App.module.scss";
 import "./components/StyleComponent/colors.module.scss";
-import "./components/MyComponent/breakpoints.module.scss";
+import "./components/ToolkitComponent/breakpoints.module.scss";
 import {
   Header,
   Button,
