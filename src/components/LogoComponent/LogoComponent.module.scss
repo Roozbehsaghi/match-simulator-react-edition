@@ -1,0 +1,48 @@
+@import "../MyComponent/breakpoints.module.scss";
+
+.svg-container {
+  position: absolute;
+  margin: 10px;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* This ensures that the SVG doesn't interfere with mouse events */
+}
+
+.logo {
+  width: 5vw;
+  height: 16vh;
+}
+
+@media screen and (max-width: $desktop-width) {
+  .logo {
+    width: 7vw;
+    height: 16vh;
+  }
+}
+
+@media screen and (max-width: $tablet-width) {
+  .logo {
+    height: 12vh;
+  }
+}
+
+@media screen and (max-width: $mobileL-width) {
+  .svg-container {
+    margin-top: 10vh;
+  }
+  .logo {
+    height: 8vh;
+  }
+}
+
+@media screen and (max-width: $mobileM-width) {
+  .logo {
+    height: 7vh;
+  }
+}
+@media screen and (max-width: $mobileS-width) {
+  .logo {
+    width: 8vw;
+    height: 6vh;
+  }
+}

@@ -1,24 +1,25 @@
-// Import necessary types and styles
 import { MatchRounds, Team } from "../components";
 import styles from "./MatchListTable.module.scss";
+import { motion } from "framer-motion";
 
 // Define the props for the MatchListTable component
-type Props = {
+type MatchListTableProps = {
   tableTitles: string[];
   allMatchRounds: MatchRounds[];
   sortedTeamsByPointsAndStrength: Team[];
 };
 
 // MatchListTable component
-const MatchListTable = ({
+const MatchListTable: React.FC<MatchListTableProps> = ({
   tableTitles,
   sortedTeamsByPointsAndStrength,
-}: Props) => {
+}) => {
   return (
     <div>
-      {/* Table header displaying the title */}
-      <h2 className={styles["text-header"]}>{tableTitles[17]}</h2>
-
+      <motion.div className={styles["text-header"]}>
+        {/* Table header displaying the title */}
+        <h2>{tableTitles[17]}</h2>
+      </motion.div>
       {/* Table displaying team statistics */}
       <table className={styles.table}>
         <thead>
@@ -31,7 +32,7 @@ const MatchListTable = ({
             ))}
           </tr>
         </thead>
-        <tbody>
+        <thead>
           {/* Table rows displaying team data */}
           {sortedTeamsByPointsAndStrength.map((team, index) => (
             <tr key={index}>
@@ -48,11 +49,10 @@ const MatchListTable = ({
               <td>{team.strength}</td>
             </tr>
           ))}
-        </tbody>
+        </thead>
       </table>
     </div>
   );
 };
 
-// Export the MatchListTable component
 export default MatchListTable;

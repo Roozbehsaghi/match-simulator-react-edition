@@ -1,8 +1,9 @@
+@import "../MyComponent/breakpoints.module.scss";
+
 /* Header container styles */
 .container {
   display: flex;
   flex-direction: column;
-  /* background-color: #cf15e8; */
   width: 100vw;
   height: 20vh;
   justify-content: center;
@@ -15,37 +16,25 @@
 
 /* First part h1 style */
 .container h1:nth-child(1) {
-  color: rgba(186, 190, 191, 255);
+  color: var(--gray74);
   margin-bottom: 25px;
 }
 
 /* Second part h1 style */
 .container h1:nth-child(2) {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: #e8ae15;
-  margin-top: 0px;
+  color: var(--yellow50);
+  margin-top: -2vh;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $tablet-width) {
   .container {
     font-size: 2.5vw;
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: $mobileL-width) {
   .container {
     font-size: 3.1vw;
   }
 }
-
-// @media screen and (max-width: 375px) {
-//   .container {
-//     font-size: 3.1vw;
-//   }
-// }
-
-// @media screen and (max-width: 320px) {
-//   .container {
-//     font-size: 3.1vw;
-//   }
-// }

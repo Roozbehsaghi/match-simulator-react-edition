@@ -1,51 +1,46 @@
-// Import React's useState hook
 import { useState } from "react";
-
-// Import styles and images
 import styles from "./Button.module.scss";
-import soccerBall from "../../image/soccerBall.png";
-import soccerBallAfterKick from "../../image/soccerBallAfterKick.png";
+import soccerBall from "../../assets/image/soccer-ball.png";
+import { motion } from "framer-motion"; // Import motion from framer-motion library for animation
 
-// Define the props for the Button component
 type Props = {
-  onClick: () => void; // Function to be executed on button click
+  onClick: () => void;
 };
 
-// Button component
 const Button = ({ onClick }: Props) => {
   // State to track whether the ball is kicked or not
   const [kick, setKick] = useState<boolean>(false);
 
-  // Function to handle button click
   const handleButtonClick = () => {
-    // Update the state to toggle the kick state
     setKick(!kick);
 
-    // Call the provided onClick function if it exists
     if (onClick) {
       onClick();
     }
   };
 
-  // Render the button with an image based on the kick state
   return (
-    <button className={styles["button"]} onClick={handleButtonClick}>
-      {!kick ? (
+    <motion.div
+      // Initial styles when the component mounts
+      initial={{ rotate: 0 }}
+      // Animated styles when the component is visible
+      animate={{ rotate: 1080 }}
+      // Transition settings for a smooth animation
+      transition={{ duration: 4 }}
+    >
+      <button className={styles["button"]} onClick={handleButtonClick}>
         <img
           src={soccerBall}
-          alt="soccerBall"
-          className={styles["soccer-ball"]}
+          alt="soccer ball"
+          className={`${
+            !kick
+              ? styles["soccer-ball-turn-left"]
+              : styles["soccer-ball-turn-right"]
+          }`}
         />
-      ) : (
-        <img
-          src={soccerBallAfterKick}
-          alt="soccerBallAfterKick"
-          className={styles["soccer-ball-after-kick"]}
-        />
-      )}
-    </button>
+      </button>
+    </motion.div>
   );
 };
 
-// Export the Button component
 export default Button;

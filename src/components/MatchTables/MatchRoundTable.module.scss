@@ -1,14 +1,35 @@
+@import "../MyComponent/breakpoints.module.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
+  height: 59vh;
+}
+
 /* Header styling */
 .text-header {
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-size: 3vw;
+  align-items: end;
+  width: 25vw;
+  height: 12vh;
+  font-size: 2vw;
   font-weight: 600;
-  color: #656464;
+  color: var(--dimgray39);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  // background-color: #881437;
-  margin-bottom: 5vh;
+  animation: slideDown 4s ease-in-out; /* Adjust animation duration and easing as needed */
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-120px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 /* Styling for each round in the match */
@@ -16,25 +37,20 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 1vw;
   width: 20vw;
-  height: 13vh;
-  border: 0.5px solid #6b6b6b;
-  background-color: #d6d8d7;
-  color: #252626;
+  height: 15vh;
+  border: 0.5px solid var(--dimgray);
+  background-color: var(--lightgray);
+  color: var(--gray15);
   border-radius: 20px;
 }
 
 /* Styling for an empty round */
 .empty-round {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: 5.5vw;
   width: 20vw;
   height: 35vh;
-  // background-color: #d6d8d7;
-  color: #252626;
+  color: var(--gray15);
   border-radius: 20px;
 }
 
@@ -44,7 +60,6 @@
   align-items: center;
   justify-content: space-evenly;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  // background-color: #291488;
 }
 
 /* Styling for team names */
@@ -53,8 +68,7 @@
   justify-content: flex-start;
   align-items: center;
   margin-left: 1vw;
-  color: #6b6b6b;
-  // background-color: aqua;
+  color: var(--dimgray42);
   font-size: 0.8vw;
   width: 8vw;
   height: 2vw;
@@ -65,13 +79,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: var(--white);
   font-size: 1vw;
   padding: 10px;
-  background-color: #881437;
+  background-color: var(--darkred);
   border-radius: 50%;
   width: 1vw;
-  height: 1vw;
+  height: 1vh;
 }
 
 /* Styling for the result separator */
@@ -79,64 +93,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #6b6b6b;
-  // background-color: #881437;
+  color: var(--dimgray42);
   font-size: 1.5vw;
   width: 2vw;
   height: 1vw;
 }
 
-/* Media query for large screens */
-@media screen and (max-width: 2500px) {
-  .teams-name {
-    margin-left: 1vw;
-    font-size: 0.8vw;
-    width: 8vw;
-    height: 2vw;
-  }
-  .teams-result {
-    width: 0.2vw;
-    height: 0.2vw;
+@media screen and (min-width: $laptopL-width) {
+  .empty-round {
+    height: 45vh;
   }
 }
 
-/* Media query for medium-sized screens */
-@media screen and (max-width: 1024px) {
-  .teams-name {
-    font-size: 0.7vw;
-  }
-  .teams-result {
-    width: 0.2vw;
-    height: 0.2vw;
-  }
-  .teams-result-line {
-    font-size: 1.5vw;
-  }
-}
-
-/* Media query for small screens */
-@media screen and (max-width: 768px) {
-  .text-header {
-    font-size: 6vw;
-    margin-bottom: 5vh;
-  }
-  .text-header {
-    font-size: 3vw;
-    font-weight: 600;
-    margin-bottom: 5vh;
-  }
-  .round {
-    width: 25vw;
-  }
-  .teams-result {
-    font-size: 1.3vw;
-    padding: 10px;
-    width: 0.2vw;
-    height: 0.2vw;
-  }
-  .teams-name {
-    margin-left: 1vw;
-    color: #6b6b6b;
-    font-size: 1vw;
+@media screen and (max-width: $desktop-width) {
+  .empty-round {
+    height: 45vh;
   }
 }

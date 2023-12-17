@@ -1,13 +1,16 @@
 import { useState } from "react";
 import styles from "./App.module.scss";
+import "./components/StyleComponent/colors.module.scss";
+import "./components/MyComponent/breakpoints.module.scss";
 import {
   Header,
   Button,
-  matchProcces,
-  tableTitles,
+  LogoComponent,
   MatchListTable,
   MatchRoundTable,
   MatchRounds,
+  matchProcces,
+  tableTitles,
   getAllTeams,
   sortByPointsAndStrengthDescending,
 } from "./components/components";
@@ -39,6 +42,8 @@ function App() {
 
       {/* Main container for the entire application */}
       <div className={styles["main-container"]}>
+        {/* FIFA Logo component */}
+        <LogoComponent />
         {/* Container for the button */}
         <div className={styles["ball-container"]}>
           {/* Button component for playing a full round */}

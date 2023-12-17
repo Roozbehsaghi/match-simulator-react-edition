@@ -1,21 +1,32 @@
+@import "../MyComponent/breakpoints.module.scss";
+
 /* Styles for the text header */
 .text-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 4vw;
+  font-size: 2.5vw;
   font-weight: 600;
-  color: #6b6b6b;
+  color: var(--dimgray);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  margin-bottom: 5vh;
-  color: #656464; /* Note: This color property appears twice, consider removing one */
+  animation: slideDown 3s ease-in-out;
+  width: 65vw;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 /* Styles for the table */
 table {
   width: 65vw;
   height: 40vh;
-  border: 1px solid #a0a0a1;
+  border: 1px solid var(--ashgray);
   border-collapse: collapse;
   margin-bottom: 5vh;
   border-radius: 10px;
@@ -25,7 +36,7 @@ table {
 .table-titles {
   display: flex;
   justify-content: center;
-  color: #d6d8d7;
+  color: var(--lightgray);
   font-size: 1vw;
   font-weight: bold;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -33,17 +44,17 @@ table {
 
 /* Styles for table rows */
 tr {
-  border: 1px solid #a0a0a1;
+  border: 1px solid var(--ashgray);
   text-align: center;
-  background-color: #d6d8d7;
+  background-color: var(--lightgray);
 }
 
 /* Styles for table cells */
 td {
-  border: 1px solid #a0a0a1;
+  border: 1px solid var(--ashgray);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1vw;
-  color: #6b6b6b;
+  color: var(--dimgray);
   width: 5vw;
   height: 6vh;
 }
@@ -69,16 +80,38 @@ th {
   text-align: center;
   width: 5vw;
   height: 6vh;
-  background-color: #881437;
-  border: 1px solid #a0a0a1;
+  background-color: var(--darkred);
+  border: 1px solid var(--ashgray);
   font-family: "Courier New", Courier, monospace;
 }
 
-/* Responsive styles for smaller screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $desktop-width) {
+  @keyframes slideDown {
+    from {
+      transform: translateX(-150px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-width) {
+  .text-header {
+    font-size: 4vw;
+    width: 100vw;
+  }
+  @keyframes slideDown {
+    from {
+      transform: translateX(-200px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
   table {
     width: 100vw;
-    height: 40vh;
   }
   .table-titles {
     font-size: 2vw;
@@ -91,14 +124,17 @@ th {
   }
 }
 
-/* Further responsive styles for even smaller screens */
-@media screen and (max-width: 425px) {
+@media screen and (max-width: $mobileL-width) {
   .text-header {
-    font-size: 7vw;
+    font-size: 5vw;
   }
-  table {
-    width: 100vw;
-    height: 40vh;
+  @keyframes slideDown {
+    from {
+      transform: translateX(-110px);
+    }
+    to {
+      transform: translateX(0);
+    }
   }
   .table-titles {
     font-size: 2.5vw;
@@ -108,5 +144,27 @@ th {
   }
   td:nth-child(2) {
     font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: $mobileM-width) {
+  @keyframes slideDown {
+    from {
+      transform: translateX(-100px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+}
+
+@media screen and (max-width: $mobileS-width) {
+  @keyframes slideDown {
+    from {
+      transform: translateX(-80px);
+    }
+    to {
+      transform: translateX(0);
+    }
   }
 }
