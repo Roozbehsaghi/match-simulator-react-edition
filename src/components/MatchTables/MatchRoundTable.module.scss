@@ -99,7 +99,7 @@
   height: 1vw;
 }
 
-@media screen and (min-width: $laptop4K-width) {
+@media screen and (max-width: $laptop4K-width) {
   .empty-round {
     height: 45vh;
   }

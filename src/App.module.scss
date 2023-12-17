@@ -29,24 +29,23 @@ body {
 }
 
 /* Container for the entire table section */
-.table-container {
+.tables-container {
   display: flex;
   width: 100vw;
   height: 75vh;
 }
 
 /* Container for the list/table on the left */
-.list-container {
+.list-table-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 65vh;
-  // background-color: green;
 }
 
 /* Container for the round/table on the right */
-.round-container {
+.round-table-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,11 +54,17 @@ body {
   height: 65vh;
 }
 
+@media screen and (max-width: $laptop-width) {
+  .round-table-container {
+    justify-content: start;
+  }
+}
+
 @media screen and (max-width: $tablet-width) {
-  .table-container {
+  .tables-container {
     justify-content: center;
   }
-  .round-container {
+  .round-table-container {
     display: none;
   }
 }

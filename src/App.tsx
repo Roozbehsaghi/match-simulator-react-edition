@@ -51,9 +51,9 @@ function App() {
         </div>
 
         {/* Container for the table section */}
-        <div className={styles["table-container"]}>
+        <div className={styles["tables-container"]}>
           {/* Container for the list/table on the left */}
-          <div className={styles["list-container"]}>
+          <div className={styles["list-table-container"]}>
             {/* MatchListTable component */}
             <MatchListTable
               tableTitles={tableTitles}
@@ -63,7 +63,7 @@ function App() {
           </div>
 
           {/* Container for the round/table on the right */}
-          <div className={styles["round-container"]}>
+          <div className={styles["round-table-container"]}>
             {/* MatchRoundTable component */}
             <MatchRoundTable
               matchRounds={allMatchRounds[allMatchRounds.length - 1]}
