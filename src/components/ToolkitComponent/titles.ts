@@ -7,7 +7,7 @@ export const tableTitles: TableTitles = [
   "Home", // Home team name
   "Score", // Score column
   "Away", // Away team name
-  "Position", // Team position in the standings
+  "Position", // Team position in the rounds
   "Team", // Team name
   "Played", // Matches played
   "Win", // Matches won
@@ -15,12 +15,12 @@ export const tableTitles: TableTitles = [
   "Loss", // Matches lost
   "For", // Goals scored
   "Against", // Goals conceded
-  "-/+", // Goal difference
+  "GD", // Goal difference
   "Points", // Total points
   "Strength", // Team strength
-  "Match Standings", // Section header for standings
+  "Match Rounds", // Section header for rounds
   "Shoot", // Ball Button text
-  "Match Schedule", // Section header for match schedule
+  "Match Standings", // Section header for match standings
   "World Football Championship", // Section header for the World Football Championship
-  "Final", // Section header for the final match
+  "Semi-Final", // Section header for the Semi-Final match
 ];
