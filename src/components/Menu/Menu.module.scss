@@ -32,7 +32,6 @@
         color: var(--mediumdarkgray);
       }
 
-      /* Selected link */
       &:active {
         color: var(--dimgray42);
       }
@@ -52,6 +51,9 @@
   .menu {
     ol {
       font-size: 1.8rem;
+      a {
+        margin-left: -2vw;
+      }
     }
   }
 }
@@ -60,11 +62,12 @@
   .menu {
     ol {
       font-size: 1.2rem;
-      background-color: var(--transparent);
-      // margin-left: -3vw;
+      background-color: unset;
+      box-shadow: none;
       margin-bottom: 0;
       a {
-        margin-left: -3.5vw;
+        margin-left: -5vw;
+        color: var(--darkred);
       }
     }
   }
@@ -78,7 +81,6 @@
       font-size: 1rem;
       margin-bottom: -5vh;
       a {
-        // margin-left: -10vw;
         color: var(--lightgray);
       }
     }
@@ -91,7 +93,9 @@
       font-size: 0.8rem;
       width: 10vw;
       width: 100%;
-      // margin-left: -8vw;
+      a {
+        margin-left: -12vw;
+      }
     }
   }
 }
@@ -101,9 +105,6 @@
     ol {
       font-size: 0.9rem;
       width: 10vw;
-      a {
-        // margin-left: -10vw;
-      }
     }
   }
 }
