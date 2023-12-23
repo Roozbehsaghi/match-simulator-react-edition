@@ -23,10 +23,10 @@ export const createTeam = (id: number, name: string): Team => {
 };
 
 // Creating teams
-export const teamA = createTeam(1, "QATAR");
-export const teamB = createTeam(2, "ECUADOR");
-export const teamC = createTeam(3, "SENEGAL");
-export const teamD = createTeam(4, "NETHERLAND");
+export const teamA = createTeam(1, "Qatar");
+export const teamB = createTeam(2, "Ecuador");
+export const teamC = createTeam(3, "Senegal");
+export const teamD = createTeam(4, "Netherlands");
 
 // Initial match rounds with teams and initial match results
 export const baseMatchRounds: MatchRounds = [

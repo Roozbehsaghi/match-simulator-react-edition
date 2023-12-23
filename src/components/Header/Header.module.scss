@@ -1,3 +1,4 @@
+/* Import breakpoints */
 @import "../ToolkitComponent/breakpoints.module.scss";
 
 /* Header container styles */
@@ -12,29 +13,33 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 600;
   font-size: 1.9vw;
-}
 
-/* First part h1 style */
-.container h1:nth-child(1) {
-  color: var(--gray74);
-  margin-bottom: 25px;
-}
+  h1 {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  }
 
-/* Second part h1 style */
-.container h1:nth-child(2) {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: var(--yellow50);
-  margin-top: -2vh;
-}
+  h1:nth-child(1) {
+    color: var(--gray74);
+    margin-bottom: 25px;
+  }
 
-@media screen and (max-width: $tablet-width) {
-  .container {
+  h1:nth-child(2) {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: var(--yellow50);
+    margin-top: -2vh;
+  }
+
+  @media screen and (max-width: $laptop-width) {
+    h1:nth-child(1) {
+      color: var(--ashgray);
+    }
+  }
+
+  @media screen and (max-width: $tablet-width) {
     font-size: 2.5vw;
   }
-}
 
-@media screen and (max-width: $mobileL-width) {
-  .container {
+  @media screen and (max-width: $mobileL-width) {
     font-size: 3.1vw;
   }
 }

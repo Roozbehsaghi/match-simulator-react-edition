@@ -5,12 +5,17 @@
   margin: 10px;
   top: 0;
   left: 0;
-  pointer-events: none; /* This ensures that the SVG doesn't interfere with mouse events */
 }
 
 .logo {
   width: 5vw;
   height: 16vh;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1) translateY(0.5vh);
+    transition: transform 0.3s ease; /* Add transition for transform */
+  }
 }
 
 @media screen and (max-width: $laptop-width) {
@@ -40,6 +45,7 @@
     height: 7vh;
   }
 }
+
 @media screen and (max-width: $mobileS-width) {
   .logo {
     width: 8vw;

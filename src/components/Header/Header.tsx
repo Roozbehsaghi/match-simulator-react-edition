@@ -1,14 +1,14 @@
 import styles from "./Header.module.scss";
-import { TableTitles } from "../components";
 import { motion } from "framer-motion"; // Import motion from framer-motion library for animation
 
 // Props for the Header component
 type HeaderProps = {
-  tableTitles: TableTitles;
+  tableTitleTop: string;
+  tableTitleBottom: string;
 };
 
 // Header component displaying titles
-const Header: React.FC<HeaderProps> = ({ tableTitles }) => {
+const Header: React.FC<HeaderProps> = ({ tableTitleTop, tableTitleBottom }) => {
   return (
     // Header container with styles applied
     <header className={styles["container"]}>
@@ -21,7 +21,7 @@ const Header: React.FC<HeaderProps> = ({ tableTitles }) => {
         transition={{ duration: 2 }}
       >
         {/* First title */}
-        {tableTitles[18]}
+        {tableTitleTop}
       </motion.h1>
 
       {/* Second title */}
@@ -30,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({ tableTitles }) => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 4 }}
       >
-        {tableTitles[19]}
+        {tableTitleBottom}
       </motion.h1>
     </header>
   );

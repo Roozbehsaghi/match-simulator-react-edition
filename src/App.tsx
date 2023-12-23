@@ -13,6 +13,7 @@ import {
   tableTitles,
   getAllTeams,
   sortByPointsAndStrengthDescending,
+  Footer,
 } from "./components/components";
 
 function App() {
@@ -38,7 +39,10 @@ function App() {
   return (
     <div>
       {/* Header component with table titles */}
-      <Header tableTitles={tableTitles} />
+      <Header
+        tableTitleTop={tableTitles[18]}
+        tableTitleBottom={tableTitles[19]}
+      />
 
       {/* Main container for the entire application */}
       <div className={styles["main-container"]}>
@@ -72,6 +76,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

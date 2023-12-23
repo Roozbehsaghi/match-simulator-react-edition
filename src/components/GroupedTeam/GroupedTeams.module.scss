@@ -1,0 +1,29 @@
+/* Import statements at the beginning of the stylesheet */
+@import "../ToolkitComponent/breakpoints.module.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.first-row,
+.second-row {
+  display: flex;
+  gap: 2.5vw; /* Set the gap/margin between child elements */
+  &:hover {
+    // cursor: pointer;
+  }
+}
+
+.first-row {
+  margin-bottom: 2.5vh; /* Add margin-bottom to the first row */
+}
+
+.second-row {
+  margin-top: 2vh; /* Add margin-top to the second row */
+  margin-bottom: 1.5vh;
+}

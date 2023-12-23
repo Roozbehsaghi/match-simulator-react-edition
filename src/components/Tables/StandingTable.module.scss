@@ -61,6 +61,7 @@ td {
 
 /* Styles for specific cells */
 td:nth-child(1) {
+  font-size: 1.2rem;
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   color: var(--mediumdarkgray);
@@ -82,9 +83,11 @@ td:nth-child(1) {
 td:nth-child(2) {
   text-align: center;
   font-weight: bold;
-  font-size: 0.65vw;
+  font-size: 0.8vw;
+  color: var(--mediumdarkgray);
   background-color: var(--yellow50);
   border: solid 1px var(--dimgray);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 td:nth-child(10) {
@@ -93,6 +96,7 @@ td:nth-child(10) {
   background-color: var(--gray200);
   border: solid 1px var(--dimgray);
   animation: fadeOut 2s ease-in-out;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 @keyframes fadeOut {
   from {
