@@ -28,8 +28,8 @@ const GroupedTeam: React.FC<GroupedTeamProps> = ({
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.4 }}
       >
-        {title && <div className={styles["title-container"]}>{title}</div>}
-        <div className={styles["body-container"]}>
+        {title && <div className={styles["container-title"]}>{title}</div>}
+        <div className={styles["container-body"]}>
           <ul>Qatar</ul>
           <ul>Ecuador</ul>
           <ul>Senegal</ul>
