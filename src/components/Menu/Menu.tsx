@@ -4,6 +4,7 @@ import { motion } from "framer-motion"; // Import motion from framer-motion libr
 
 const localHost = "http://localhost:3000/";
 
+// Menu items configuration with animation properties
 const menuItems = [
   {
     initial: { opacity: 0, scale: 0 },
@@ -37,16 +38,19 @@ const menuItems = [
 
 const Menu = () => {
   return (
+    // Navigation menu component
     <nav className={styles.menu}>
       <ul>
         {menuItems.map((menuItem, index) => {
           return (
+            // Animated list item using framer-motion
             <motion.ol
               key={index}
               initial={menuItem.initial}
               animate={menuItem.animate}
               transition={menuItem.transition}
             >
+              {/* Link for each menu item */}
               <a href={menuItem.href}>{menuItem.text}</a>
             </motion.ol>
           );
