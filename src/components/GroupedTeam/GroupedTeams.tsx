@@ -41,6 +41,7 @@ const GroupedTeams = () => {
           <GroupedTeam key={index} navigateLink={route} title={title} />
         ))}
       </motion.div>
+
       <Footer />
     </div>
   );
