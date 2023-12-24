@@ -17,7 +17,8 @@ const Footer = () => {
             <a href="/">{tableTitles[29]}</a>
           </p>
           {/* Second paragraph with copyright information */}
-          <p> &copy; {tableTitles[30]} </p>
+          {/* <p> &copy; {tableTitles[30]} </p> */}
+          <p>"Pages are in developing, except for the Semi-Final page."</p>
         </div>
       </article>
     </footer>
