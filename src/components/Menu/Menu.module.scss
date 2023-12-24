@@ -28,6 +28,7 @@
     a {
       color: var(--darkred);
       white-space: nowrap;
+      margin-left: -1vw;
 
       &:hover {
         color: var(--mediumdarkgray);
