@@ -1,3 +1,4 @@
+// Import breakpoints for responsive design
 @import "../ToolkitComponent/breakpoints.module.scss";
 
 /* Styles for the text header */
@@ -10,7 +11,7 @@
   color: var(--dimgray);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   animation: slideDown 3s ease-in-out;
-  width: 65vw;
+  width: 65vw; // Set width for larger screens
 }
 
 @keyframes slideDown {
@@ -24,7 +25,7 @@
 
 /* Styles for the table */
 table {
-  width: 65vw;
+  width: 65vw; // Set width for larger screens
   height: 40vh;
   border: 1px solid var(--ashgray);
   border-collapse: collapse;
@@ -69,6 +70,7 @@ td:nth-child(1) {
   border: solid 1px var(--dimgray);
   animation: fadeIn 2s ease-in-out;
 }
+
 @keyframes fadeIn {
   from {
     background-color: var(--lightgray);
@@ -87,7 +89,19 @@ td:nth-child(2) {
   color: var(--mediumdarkgray);
   background-color: var(--yellow50);
   border: solid 1px var(--dimgray);
+  animation: fade 2s ease-in-out;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+
+  @keyframes fade {
+    from {
+      background-color: var(--lightgray);
+      color: var(--dimgray);
+    }
+    to {
+      background-color: var(--yellow50);
+      color: var(--mediumdarkgray);
+    }
+  }
 }
 
 td:nth-child(10) {
@@ -98,6 +112,7 @@ td:nth-child(10) {
   animation: fadeOut 2s ease-in-out;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
+
 @keyframes fadeOut {
   from {
     background-color: var(--lightgray);
@@ -117,6 +132,7 @@ th {
   font-family: "Courier New", Courier, monospace;
 }
 
+// Responsive design for larger screens
 @media screen and (max-width: $laptop-width) {
   @keyframes slideDown {
     from {
@@ -128,11 +144,13 @@ th {
   }
 }
 
+// Responsive design for tablets
 @media screen and (max-width: $tablet-width) {
   .text-header {
     font-size: 4vw;
-    width: 100vw;
+    width: 100vw; // Full width for smaller screens
   }
+
   @keyframes slideDown {
     from {
       transform: translateX(-200px);
@@ -143,23 +161,28 @@ th {
   }
 
   table {
-    width: 100vw;
+    width: 100vw; // Full width for smaller screens
   }
+
   .table-titles {
     font-size: 2vw;
   }
+
   td {
     font-size: 2vw;
   }
+
   td:nth-child(2) {
     font-size: 1.5vw;
   }
 }
 
+// Responsive design for larger mobile devices
 @media screen and (max-width: $mobileL-width) {
   .text-header {
     font-size: 5vw;
   }
+
   @keyframes slideDown {
     from {
       transform: translateX(-110px);
@@ -168,17 +191,21 @@ th {
       transform: translateX(0);
     }
   }
+
   .table-titles {
     font-size: 2.5vw;
   }
+
   td {
     font-size: 3vw;
   }
+
   td:nth-child(2) {
     font-size: 2vw;
   }
 }
 
+// Responsive design for medium mobile devices
 @media screen and (max-width: $mobileM-width) {
   @keyframes slideDown {
     from {
@@ -190,6 +217,7 @@ th {
   }
 }
 
+// Responsive design for smaller mobile devices
 @media screen and (max-width: $mobileS-width) {
   @keyframes slideDown {
     from {
