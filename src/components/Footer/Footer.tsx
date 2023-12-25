@@ -18,7 +18,7 @@ const Footer = () => {
           </p>
           {/* Second paragraph with copyright information */}
           {/* <p> &copy; {tableTitles[30]} </p> */}
-          <p>"Pages are under development, except for the Semi-Final page."</p>
+          <p>"pages are under construction."</p>
         </div>
       </article>
     </footer>

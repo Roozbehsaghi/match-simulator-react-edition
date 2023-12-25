@@ -9,14 +9,14 @@ const menuItems = [
   {
     initial: { opacity: 0, scale: 0 },
     animate: { opacity: 1, scale: 1 },
-    transition: { duration: 0.7 },
+    transition: { duration: 0.9 },
     text: "Groups",
-    href: `${localHost}groups`,
+    href: `${localHost}teams`,
   },
   {
     initial: { opacity: 0, scale: 0 },
     animate: { opacity: 1, scale: 1 },
-    transition: { duration: 0.7 },
+    transition: { duration: 1 },
     text: "Match Schedule",
     href: localHost,
   },

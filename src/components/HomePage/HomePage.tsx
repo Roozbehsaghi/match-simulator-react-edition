@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./HomePage.module.scss";
 import {
   Header,
@@ -8,14 +8,10 @@ import {
   LogoComponent,
   FixtureData,
 } from "../components";
-import { fetchEuropeanCountryNames } from "./countrieNames";
+
 import { motion } from "framer-motion";
 
 const HomePage = () => {
-  useEffect(() => {
-    fetchEuropeanCountryNames();
-  }, []);
-
   return (
     <div className={styles.container}>
       <div className={styles["header-container"]}>

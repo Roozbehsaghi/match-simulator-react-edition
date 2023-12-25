@@ -9,19 +9,21 @@ import {
   Route,
   useParams,
 } from "react-router-dom";
-import HomePage from "./components/HomePage/HomePage";
-import GroupedTeams from "./components/GroupedTeam/GroupedTeams";
-import GroupedTeam from "./components/GroupedTeam/GroupedTeam";
+import {
+  HomePage,
+  CountryTeamsSection,
+  CountrySection,
+} from "./components/components";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
-const IndividualGroupPage: React.FC = () => {
-  const { title } = useParams<{ title: string }>(); // Access the title from URL parameters
+// const IndividualGroupPage: React.FC = () => {
+//   const { title } = useParams<{ title: string }>(); // Access the title from URL parameters
 
-  return <GroupedTeam navigateLink={""} title={title} />;
-};
+//   return <GroupedTeam navigateLink={""} title={title} />;
+// };
 
 root.render(
   <React.StrictMode>
@@ -29,11 +31,15 @@ root.render(
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/table" element={<App />} />
-        <Route path="/groups" element={<GroupedTeams />} />
+        <Route path="/teams" element={<CountryTeamsSection />} />
         <Route
+          path="/team"
+          element={<CountrySection title={""} countries={[]} />}
+        />
+        {/* <Route
           path="/table/:title" // Add a parameter for the title
           element={<IndividualGroupPage />} // Create a component to handle the page
-        />
+        /> */}
       </Routes>
     </Router>
   </React.StrictMode>

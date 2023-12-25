@@ -7,7 +7,10 @@ export { default as RoundTable } from "./Tables/RoundTable";
 export { default as LogoComponent } from "./LogoComponent/LogoComponent";
 export { default as Footer } from "./Footer/Footer";
 export { default as Menu } from "./Menu/Menu";
+export { default as HomePage } from "./HomePage/HomePage";
 export { default as FixtureData } from "./HomePage/FixtureData";
+export { default as CountryTeamsSection } from "./GroupedTeam/CountryTeamsSection";
+export { default as CountrySection } from "./GroupedTeam/CountrySection";
 
 // Export titles and color-related utilities
 export * from "./ToolkitComponent/titles";
