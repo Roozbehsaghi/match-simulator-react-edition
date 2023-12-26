@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./Button.module.scss";
 import soccerBall from "../../assets/image/soccer-ball.png";
+import fingerClicker from "../../assets/image/finger-clicker.png";
 import { motion } from "framer-motion"; // Import motion from framer-motion library for animation
 
 type Props = {
@@ -20,15 +21,16 @@ const Button = ({ onClick }: Props) => {
   };
 
   return (
-    <motion.div
-      // Initial styles when the component mounts
-      initial={{ rotate: 0 }}
-      // Animated styles when the component is visible
-      animate={{ rotate: 1080 }}
-      // Transition settings for a smooth animation
-      transition={{ duration: 4 }}
-    >
-      <button className={styles["button"]} onClick={handleButtonClick}>
+    <div className={styles["soccer-ball-container"]}>
+      <motion.button
+        className={styles["button"]}
+        onClick={handleButtonClick} // Initial styles when the component mounts
+        initial={{ rotate: 0 }}
+        // Animated styles when the component is visible
+        animate={{ rotate: 1080 }}
+        // Transition settings for a smooth animation
+        transition={{ duration: 4 }}
+      >
         <img
           src={soccerBall}
           alt="soccer ball"
@@ -38,8 +40,13 @@ const Button = ({ onClick }: Props) => {
               : styles["soccer-ball-turn-right"]
           }`}
         />
-      </button>
-    </motion.div>
+      </motion.button>
+      <img
+        className={styles["finger-clicker"]}
+        src={fingerClicker}
+        alt="finger clicker"
+      ></img>
+    </div>
   );
 };
 

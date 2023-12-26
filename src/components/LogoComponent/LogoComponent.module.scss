@@ -18,16 +18,32 @@
   }
 }
 
+.finger-clicker {
+  width: 3vw;
+  height: 3vh;
+  // Mirror the logo horizontally
+  transform: scaleX(-1);
+  margin-bottom: 2vh;
+}
+
 @media screen and (max-width: $laptop-width) {
   .logo {
     width: 7vw;
     height: 16vh;
+  }
+  .finger-clicker {
+    width: 4vw;
+    height: 3vh;
   }
 }
 
 @media screen and (max-width: $tablet-width) {
   .logo {
     height: 12vh;
+  }
+  .finger-clicker {
+    width: 4vw;
+    height: 2vh;
   }
 }
 
@@ -37,6 +53,10 @@
   }
   .logo {
     height: 8vh;
+  }
+  .finger-clicker {
+    width: 4vw;
+    height: 1vh;
   }
 }
 
