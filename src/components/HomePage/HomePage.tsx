@@ -8,7 +8,6 @@ import {
   LogoComponent,
   FixtureData,
 } from "../components";
-
 import { motion } from "framer-motion";
 
 const HomePage = () => {

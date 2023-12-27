@@ -34,7 +34,9 @@ root.render(
         <Route path="/teams" element={<CountryTeamsSection />} />
         <Route
           path="/team"
-          element={<CountrySection title={""} countries={[]} />}
+          element={
+            <CountrySection title={""} countries={[]} onClick={() => {}} />
+          }
         />
         {/* <Route
           path="/table/:title" // Add a parameter for the title

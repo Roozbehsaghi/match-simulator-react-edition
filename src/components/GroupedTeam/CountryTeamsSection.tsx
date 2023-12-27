@@ -8,10 +8,16 @@ import {
   listOfCountryNames,
   CountrySection,
 } from "../components";
+import { useNavigate } from "react-router-dom";
 
 const CountryTeamsSection = () => {
   // Route for navigation
   const route: string = "/table";
+
+  const navigate = useNavigate();
+  const backToHomePage = () => {
+    navigate(route);
+  };
 
   // Extract titles for each country section from tableTitles array
   const sectionTitles: string[] = tableTitles.slice(21, 29);
@@ -33,6 +39,7 @@ const CountryTeamsSection = () => {
               key={index}
               title={sectionTitles[index]}
               countries={countriesList}
+              onClick={backToHomePage}
             />
           ))}
         </div>
