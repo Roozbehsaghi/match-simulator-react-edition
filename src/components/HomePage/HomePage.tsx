@@ -6,7 +6,6 @@ import {
   Footer,
   Menu,
   LogoComponent,
-  FixtureData,
 } from "../components";
 import { motion } from "framer-motion";
 
@@ -17,7 +16,7 @@ const HomePage = () => {
         {/* Header component with table titles */}
         <Header
           tableTitleTop={tableTitles[18]}
-          tableTitleBottom={tableTitles[20]}
+          tableTitleBottom={tableTitles[37]}
         />
         <LogoComponent />
       </div>
@@ -26,7 +25,7 @@ const HomePage = () => {
           <Menu />
         </div>
       </motion.div>
-      <FixtureData />
+
       <Footer />
     </div>
   );

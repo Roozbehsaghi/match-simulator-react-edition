@@ -1,0 +1,80 @@
+@import "../StyleModules/breakpoints.module.scss";
+
+.soccer-ball-container {
+  position: absolute;
+  margin: 10px;
+  left: 10;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--gray200); /* Set border style and width */
+  border-radius: 50%;
+  width: 6vw;
+  height: 12vh;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  margin-top: 10vh;
+}
+
+.soccer-ball-turn-right,
+.soccer-ball-turn-left {
+  width: 8vw;
+  height: 12.8vh;
+  border-radius: 50%;
+  transition: transform 2s;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.soccer-ball-turn-right {
+  transform: rotate(360deg);
+}
+
+.soccer-ball-turn-left {
+  transform: rotate(0deg);
+}
+
+.finger-clicker {
+  width: 3vw;
+  height: 3vh;
+  transform: rotate(-90deg);
+  margin-top: 4vh;
+  margin-left: 2vw;
+}
+
+/* Common styles for all media queries */
+@media screen and (max-width: $laptop4K-width),
+  (max-width: $laptopL-width),
+  (max-width: $laptop-width),
+  (max-width: $tablet-width),
+  (max-width: $mobileL-width),
+  (max-width: $mobileM-width),
+  (max-width: $mobileS-width) {
+  .soccer-ball-turn-right,
+  .soccer-ball-turn-left {
+    width: 30vw;
+    height: 12.8vh;
+    background-color: var(--gray400);
+  }
+}
+
+@media screen and (max-width: $tablet-width) {
+  .button {
+    margin-top: 7vh;
+  }
+  .finger-clicker {
+    margin-top: -2vh;
+    width: 3vw;
+    height: 2vh;
+  }
+}
+
+@media screen and (max-width: $mobileL-width) {
+  .finger-clicker {
+    width: 5vw;
+    height: 2vh;
+  }
+}

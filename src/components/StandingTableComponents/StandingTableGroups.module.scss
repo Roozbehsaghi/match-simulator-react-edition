@@ -1,0 +1,75 @@
+@import "../StyleModules/breakpoints.module.scss";
+
+body {
+  background-color: var(--darkred);
+  margin: 0;
+  padding: 0;
+}
+
+/* Main container for the entire layout */
+.tables-container {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 75vh;
+  background-color: var(--gray200);
+  gap: 15px;
+}
+
+.group-standing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 24vw;
+  height: 35vh;
+  margin-top: 3px;
+  // background-color: cadetblue;
+}
+
+.group-header {
+  display: flex;
+  width: 24vw;
+  height: 5vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: var(--dimgray42);
+  margin-top: 0vh;
+  // background-color: burlywood;
+}
+
+.individual-table {
+  display: flex;
+  // justify-content: center;
+  // align-items: start;
+  width: 24vw;
+  height: 30vh;
+  background-color: var(--dimgray42);
+  margin-top: -1vh;
+}
+
+.ball-container {
+  position: absolute;
+  top: -8%;
+  right: 12%;
+}
+
+@media screen and (max-width: $laptopL-width) {
+  .box-container {
+    height: 82vh;
+  }
+  .ball-container {
+    height: 13vh;
+  }
+}
+
+@media screen and (max-width: $tablet-width) {
+  .tables-container {
+    justify-content: center;
+  }
+}

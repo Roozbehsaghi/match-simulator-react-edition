@@ -1,4 +1,4 @@
-@import "./components/ToolkitComponent/breakpoints.module.scss";
+@import "./components/StyleModules/breakpoints.module.scss";
 
 body {
   background-color: var(--darkred);
@@ -56,7 +56,7 @@ body {
 
 @media screen and (max-width: $laptop-width) {
   .round-table-container {
-    justify-content: start;
+    justify-content: flex-start;
   }
 }
 

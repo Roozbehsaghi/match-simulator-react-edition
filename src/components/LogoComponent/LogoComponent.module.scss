@@ -1,4 +1,4 @@
-@import "../ToolkitComponent/breakpoints.module.scss";
+@import "../StyleModules/breakpoints.module.scss";
 
 .svg-container {
   position: absolute;
@@ -24,6 +24,14 @@
   // Mirror the logo horizontally
   transform: scaleX(-1);
   margin-bottom: 2vh;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: $laptop-width) {

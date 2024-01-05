@@ -1,10 +1,9 @@
 import { useState } from "react";
 import styles from "./App.module.scss";
-import "./components/StyleComponent/colors.module.scss";
-import "./components/ToolkitComponent/breakpoints.module.scss";
+import "./components/StyleModules/colors.module.scss";
 import {
   Header,
-  Button,
+  BallComponent,
   LogoComponent,
   StandingTable,
   RoundTable,
@@ -50,8 +49,8 @@ function App() {
         <LogoComponent />
         {/* Container for the button */}
         <div className={styles["ball-container"]}>
-          {/* Button component for playing a full round */}
-          <Button onClick={playFullRound} />
+          {/* BallComponent component for playing a full round */}
+          <BallComponent onClick={playFullRound} />
         </div>
 
         {/* Container for the table section */}

@@ -1,0 +1,19 @@
+@import "../StyleModules/breakpoints.module.scss";
+
+.qatar-ball-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 29vw;
+  height: 59vh;
+  border-radius: 300px;
+}
+
+.qatar-ball {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 29vw;
+  height: 57vh;
+  border-radius: 300px;
+}

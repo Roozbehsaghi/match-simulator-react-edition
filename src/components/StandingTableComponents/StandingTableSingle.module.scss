@@ -1,0 +1,91 @@
+// Import breakpoints for responsive design
+@import "../StyleModules/breakpoints.module.scss";
+
+/* Styles for the table */
+.chart {
+  width: 24vw;
+  height: 30vh;
+  border: 2px solid var(--dimgray);
+  border-collapse: collapse;
+}
+
+/* Styles for table titles */
+.table-headers {
+  display: flex;
+  justify-content: center;
+  color: var(--lightgray);
+  font-size: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* Styles for table cells */
+.table-cell {
+  border: 1px solid var(--ashgray);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 10px;
+  color: var(--dimgray);
+  width: 3vw;
+  height: 3vh;
+}
+
+/* Styles for specific cells */
+.table-cell:nth-child(1) {
+  font-size: 12px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  color: var(--mediumdarkgray);
+  background-color: var(--ashgray);
+  border: solid 1px var(--dimgray);
+  animation: newfadeIn 2s ease-in-out;
+}
+
+.table-cell:nth-child(2) {
+  text-align: center;
+  font-weight: bold;
+  font-size: 8px;
+  color: var(--mediumdarkgray);
+  border: solid 1px var(--dimgray);
+  animation: newfade 2s ease-in-out;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  background-color: var(--yellow40);
+}
+
+.table-cell:nth-child(10) {
+  font-weight: bold;
+  color: var(--mediumdarkgray);
+  background-color: var(--gray200);
+  border: solid 1px var(--dimgray);
+  animation: newfadeOut 2s ease-in-out;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes newfadeIn {
+  from {
+    background-color: var(--lightgray);
+    color: var(--dimgray);
+  }
+  to {
+    background-color: var(--ashgray);
+    color: var(--mediumdarkgray);
+  }
+}
+
+@keyframes newfade {
+  from {
+    background-color: var(--lightgray);
+    color: var(--dimgray);
+  }
+  to {
+    background-color: var(--yellow40);
+    color: var(--mediumdarkgray);
+  }
+}
+
+@keyframes newfadeOut {
+  from {
+    background-color: var(--lightgray);
+  }
+  to {
+    background-color: var(--gray200);
+  }
+}
