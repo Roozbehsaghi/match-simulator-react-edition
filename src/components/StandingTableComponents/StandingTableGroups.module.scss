@@ -26,7 +26,6 @@ body {
   width: 24vw;
   height: 35vh;
   margin-top: 3px;
-  // background-color: cadetblue;
 }
 
 .group-header {
@@ -40,13 +39,9 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: var(--dimgray42);
   margin-top: 0vh;
-  // background-color: burlywood;
 }
 
 .individual-table {
-  display: flex;
-  // justify-content: center;
-  // align-items: start;
   width: 24vw;
   height: 30vh;
   background-color: var(--dimgray42);
