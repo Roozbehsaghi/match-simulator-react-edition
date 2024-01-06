@@ -22,7 +22,11 @@ export type Group = Record<string, Team>;
 export type TransformedGroup = { groupName: string; teams: Group };
 export type TransformedGroupsArray = TransformedGroup[];
 
-export type GroupWithMatches = { groupName: string; matches: Match[] };
+export type GroupWithMatches = {
+  groupName: string;
+  teams: Team[]; // Add this line if it's not already there
+  matches: Match[];
+};
 
 // Table titles
 export type TableTitles = (

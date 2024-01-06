@@ -3,37 +3,35 @@ import styles from "./StandingTableGroups.module.scss";
 import {
   Header,
   LogoComponent,
-  MatchRounds,
-  matchProcces,
   tableTitles,
-  getAllTeams,
-  sortByPointsAndStrengthDescending,
   Footer,
   StandingTableSingle,
   BallComponent,
+  baseMatchRoundsWithGroups,
 } from "../components";
+import { motion } from "framer-motion";
 
 type StandingTableGroupsProps = {};
 
 const StandingTableGroups: React.FC<StandingTableGroupsProps> = () => {
-  // State to manage all match rounds
-  const [allMatchRounds, setAllMatchRounds] = useState<MatchRounds[]>([]);
+  function playFullRound(): void {
+    console.log("Function not implemented.");
+  }
 
-  // Function to play a full round and update state
-  const playFullRound = () => {
-    const newMatch = matchProcces();
-    setAllMatchRounds((prevRounds) => [...prevRounds, newMatch]);
-  };
-
-  // Flatten the array of arrays to a single array
-  const allMatchRound = allMatchRounds.map((arrayOfArrays) =>
-    arrayOfArrays.flatMap((array) => array)
-  );
-
-  // Get all teams and sort them by points and strength
-  const allTeams = getAllTeams(allMatchRound.flat());
-  const sortedTeamsByPointsAndStrength =
-    sortByPointsAndStrengthDescending(allTeams);
+  const animation = [
+    { duration: 1 },
+    { duration: 1.3 },
+    { duration: 1.6 },
+    { duration: 1.9 },
+    { duration: 2.1 },
+    { duration: 2.4 },
+    { duration: 2.7 },
+    { duration: 3 },
+  ].map(({ duration }) => ({
+    initial: { opacity: 0, scale: 0 },
+    animate: { opacity: 1, scale: 1 },
+    transition: { duration },
+  }));
 
   return (
     <div>
@@ -50,21 +48,23 @@ const StandingTableGroups: React.FC<StandingTableGroupsProps> = () => {
       </div>
       {/* Main container for the entire application */}
       <div className={styles["tables-container"]}>
-        {allMatchRounds.map((rounds, id) => {
-          return rounds.map((round, id) => (
-            <div key={id} className={styles["group-standing-container"]}>
-              <h3 className={styles["group-header"]}>Group A</h3>
-              <div className={styles["individual-table"]}>
-                {/* <StandingTableSingle
-                  tableTitles={tableTitles}
-                  allMatchRounds={allMatchRounds}
-                  sortedTeamsByPointsAndStrength={
-                    sortedTeamsByPointsAndStrength
-                  }
-                /> */}
+        {baseMatchRoundsWithGroups.map((group, index) => {
+          const countryNames = group.teams.map((team) => team);
+          // Retrieve the animation properties for the current index
+          const animProps = animation[index % animation.length];
+          return (
+            <motion.div key={index} {...animProps}>
+              <div className={styles["group-standing-container"]}>
+                <h3 className={styles["group-header"]}>{group.groupName}</h3>
+                <div className={styles["individual-table"]}>
+                  <StandingTableSingle
+                    tableTitles={tableTitles}
+                    countryNames={countryNames}
+                  />
+                </div>
               </div>
-            </div>
-          ));
+            </motion.div>
+          );
         })}
       </div>
 

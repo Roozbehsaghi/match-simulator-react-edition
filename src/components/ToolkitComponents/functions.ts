@@ -7,6 +7,8 @@ import {
   Group,
   GroupWithMatches,
   TransformedGroupsArray,
+  tableTitles,
+  listOfCountryNames,
 } from "../components";
 
 // Utility function to generate a random number between 0 and 7
@@ -27,33 +29,12 @@ export const createTeam = (id: number, name: string): Team => ({
   strength: 0,
 });
 
-// List of country names, grouped
-export const listOfCountryNames: string[][] = [
-  ["Qatar", "Ecuador", "Senegal", "Netherlands"],
-  ["England", "Iran", "USA", "Wales"],
-  ["Argentina", "Saudi Arabia", "Mexico", "Poland"],
-  ["France", "Australia", "Denmark", "Tunisia"],
-  ["Spain", "Costa Rica", "Germany", "Japan"],
-  ["Belgium", "Canada", "Morocco", "Croatia"],
-  ["Brazil", "Serbia", "Switzerland", "Cameroon"],
-  ["Portugal", "Ghana", "Uruguay", "Republic of Korea"],
-];
+// Define group names
+export const groupNames = tableTitles.slice(21, 29).map((title) => title);
 
 export const teams: Team[] = listOfCountryNames
   .flat()
   .map((country, index) => createTeam((index % 4) + 1, country));
-
-// Define group names
-export const groupNames: string[] = [
-  "Group A",
-  "Group B",
-  "Group C",
-  "Group D",
-  "Group E",
-  "Group F",
-  "Group G",
-  "Group H",
-];
 
 // Group teams into respective groups and transform their structure into an array
 export const transformedGroupsArray: TransformedGroupsArray = groupNames.map(
@@ -113,6 +94,7 @@ export const initializeMatchRoundsWithGroups = (
 
     matchRoundsWithGroups.push({
       groupName: group.groupName,
+      teams: groupTeams, // Include the teams here
       matches: groupMatches,
     });
   });

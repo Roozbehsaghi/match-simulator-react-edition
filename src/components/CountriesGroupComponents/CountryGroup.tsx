@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 
 type CountryGroupProps = {
   groupName: string;
-  countryNamesInArray: string[];
+  countryNames: string[];
   onClick: () => void;
 };
 
 const CountryGroup: React.FC<CountryGroupProps> = ({
   groupName,
-  countryNamesInArray,
+  countryNames,
   onClick,
 }) => {
   return (
@@ -22,7 +22,7 @@ const CountryGroup: React.FC<CountryGroupProps> = ({
     >
       <div className={styles["box-title"]}>{groupName}</div>
       <div className={styles["box-contents"]}>
-        {countryNamesInArray.map((country, id) => (
+        {countryNames.map((country, id) => (
           <div key={id} className={styles["country"]} onClick={onClick}>
             {country}
           </div>

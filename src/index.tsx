@@ -31,10 +31,10 @@ root.render(
           element={
             <CountryGroup
               groupName={""}
-              countryNamesInArray={[]}
               onClick={function (): void {
                 throw new Error("Function not implemented.");
               }}
+              countryNames={[]}
             />
           }
         />

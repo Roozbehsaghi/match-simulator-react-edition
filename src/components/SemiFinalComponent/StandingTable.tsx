@@ -15,9 +15,6 @@ const StandingTable: React.FC<StandingTableProps> = ({
   allMatchRounds,
   sortedTeamsByPointsAndStrength,
 }) => {
-  // console.log("allMatchRounds", allMatchRounds);
-  // console.log("sortedTeamsByPointsAndStrength", sortedTeamsByPointsAndStrength);
-
   return (
     <div>
       <motion.div className={styles["text-header"]}>

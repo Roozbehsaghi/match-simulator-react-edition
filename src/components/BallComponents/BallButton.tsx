@@ -1,7 +1,6 @@
 import { useState } from "react";
 import styles from "./BallButton.module.scss";
 import soccerBall from "../../assets/image/soccer-ball.png";
-import fingerClicker from "../../assets/image/finger-clicker.png";
 import { motion } from "framer-motion"; // Import motion from framer-motion library for animation
 
 type BallComponentProps = {
@@ -41,12 +40,6 @@ const BallComponent: React.FC<BallComponentProps> = ({ onClick }) => {
           }`}
         />
       </motion.button>
-      {/* this will be replaced */}
-      {/* <img
-        className={styles["finger-clicker"]}
-        src={fingerClicker}
-        alt="finger clicker"
-      ></img> */}
       <div className={styles["finger-clicker"]}></div>
     </div>
   );

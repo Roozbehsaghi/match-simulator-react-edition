@@ -42,3 +42,15 @@ export const tableTitles: TableTitles = [
   "Final Match", // Section Menu title 36
   "FIFA", // Section Header title 37
 ];
+
+// List of country names, grouped
+export const listOfCountryNames: string[][] = [
+  ["Qatar", "Ecuador", "Senegal", "Netherlands"],
+  ["England", "Iran", "USA", "Wales"],
+  ["Argentina", "Saudi Arabia", "Mexico", "Poland"],
+  ["France", "Australia", "Denmark", "Tunisia"],
+  ["Spain", "Costa Rica", "Germany", "Japan"],
+  ["Belgium", "Canada", "Morocco", "Croatia"],
+  ["Brazil", "Serbia", "Switzerland", "Cameroon"],
+  ["Portugal", "Ghana", "Uruguay", "Republic of Korea"],
+];

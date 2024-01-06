@@ -5,7 +5,6 @@ import {
   Header,
   LogoComponent,
   Footer,
-  listOfCountryNames,
   CountryGroup,
   defaultRoutes,
   baseMatchRoundsWithGroups,
@@ -21,8 +20,6 @@ const CountriesGroup = () => {
     // navigate(route);
   };
 
-  let countryNamesInArray = listOfCountryNames.map((country) => country);
-
   return (
     <div>
       <Header
@@ -33,16 +30,14 @@ const CountriesGroup = () => {
 
       <div className={styles["outer-container"]}>
         <div className={styles["inner-container"]}>
-          {baseMatchRoundsWithGroups.map((group, index) => {
-            return (
-              <CountryGroup
-                key={index}
-                groupName={group.groupName}
-                countryNamesInArray={countryNamesInArray[index]}
-                onClick={handleNavigate}
-              />
-            );
-          })}
+          {baseMatchRoundsWithGroups.map((group, index) => (
+            <CountryGroup
+              key={index}
+              groupName={group.groupName}
+              countryNames={group.teams.map((team) => team.name)}
+              onClick={handleNavigate}
+            />
+          ))}
         </div>
       </div>
 
