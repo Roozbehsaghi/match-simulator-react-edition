@@ -13,11 +13,12 @@ import { useNavigate } from "react-router-dom";
 
 const CountriesGroup = () => {
   // Route for navigation
-  const route: string = `${defaultRoutes.countryGroup}`;
-
   const navigate = useNavigate();
-  const handleNavigate = () => {
-    // navigate(route);
+  // Updated to take a parameter for group name
+  const handleNavigate = (groupName: string) => {
+    // Use groupName to dynamically set the navigation path
+    navigate(`${defaultRoutes.countryGroup}/${groupName}`);
+    console.log("groupName", groupName);
   };
 
   return (
@@ -35,7 +36,7 @@ const CountriesGroup = () => {
               key={index}
               groupName={group.groupName}
               countryNames={group.teams.map((team) => team.name)}
-              onClick={handleNavigate}
+              onClick={() => handleNavigate(group.groupName)}
             />
           ))}
         </div>

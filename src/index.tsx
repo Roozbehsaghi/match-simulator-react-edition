@@ -27,17 +27,18 @@ root.render(
           element={<CountriesGroup />}
         />
         <Route
-          path={defaultRoutes.countryGroup}
+          path={`${defaultRoutes.countryGroup}/:groupName`}
           element={
             <CountryGroup
               groupName={""}
+              countryNames={[]}
               onClick={function (): void {
                 throw new Error("Function not implemented.");
               }}
-              countryNames={[]}
             />
           }
         />
+
         <Route
           path={defaultRoutes.standingTableGroups}
           element={<StandingTableGroups />}

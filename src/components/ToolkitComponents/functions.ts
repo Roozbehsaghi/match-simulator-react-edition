@@ -125,6 +125,6 @@ export const defaultRoutes: DefaultRoutes = {
   homePage: "",
   semiFinal: "semi-final",
   countriesGroup: "countries-group",
-  countryGroup: "country-group",
+  countryGroup: "/countries-group/country-group/:param",
   standingTableGroups: "standing-table-groups",
 };
